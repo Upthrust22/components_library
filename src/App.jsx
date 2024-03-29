@@ -2,7 +2,7 @@ import { FaCircleInfo } from "react-icons/fa6";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { IoWarning } from "react-icons/io5";
 import Badge from "./components/badge/Badges";
-import Banner from "./components/banner/Banners";
+import Banner from "./components/banner/index";
 
 function App() {
 
@@ -30,55 +30,63 @@ function App() {
       </div>
       
       <div>
-        <Banner 
-          icon={<FaCircleInfo />}
-          title="Update available"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum." 
-        />
-        <Banner 
-          icon={<FaCircleInfo />}
-          title="Update available" 
-        />
+        <Banner>
+          <Banner.Icon>{<FaCircleInfo />}</Banner.Icon>
+          <div>
+            <Banner.Title>Update available</Banner.Title>
+            <Banner.Content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.</Banner.Content>
+          </div>
+        </Banner>
+        <Banner>
+          <Banner.Icon>{<FaCircleInfo />}</Banner.Icon>
+          <div>
+            <Banner.Title>Update available</Banner.Title>
+          </div>
+        </Banner> 
+
+        <Banner variant="success">
+          <Banner.Icon>{<FaCheckCircle />}</Banner.Icon>
+          <div>
+            <Banner.Title>Congratulations!</Banner.Title>
+            <Banner.Content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</Banner.Content>
+          </div>
+        </Banner>
+        <Banner variant="success">
+          <Banner.Icon>{<FaCheckCircle />}</Banner.Icon>
+          <div>
+            <Banner.Title>Congratulations!</Banner.Title>
+          </div>
+        </Banner> 
+
+        <Banner variant="warning">
+          <Banner.Icon>{<IoWarning />}</Banner.Icon>
+          <div>
+            <Banner.Title>Attention!</Banner.Title>
+            <Banner.Content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.</Banner.Content>
+          </div>
+        </Banner>
+        <Banner variant="warning">
+          <Banner.Icon>{<IoWarning />}</Banner.Icon>
+          <div>
+            <Banner.Title>Attention!</Banner.Title>
+          </div>
+        </Banner> 
+
+        <Banner variant="error">
+          <Banner.Icon>{<FaTimesCircle />}</Banner.Icon>
+          <div>
+            <Banner.Title>There is a problem with your application</Banner.Title>
+            <Banner.Content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.</Banner.Content>
+          </div>
+        </Banner>
+        <Banner variant="error">
+          <Banner.Icon>{<FaTimesCircle />}</Banner.Icon>
+          <div>
+            <Banner.Title>There is a problem with your application</Banner.Title>
+          </div>
+        </Banner> 
       </div>
-      <div>
-        <Banner 
-          icon={<FaCheckCircle />}
-          title="Congratulations!"
-          variant="success"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam." 
-        />
-        <Banner 
-          icon={<FaCheckCircle />}
-          title="Congratulations!"
-          variant="success" 
-        />
-      </div>
-      <div>
-        <Banner 
-          icon={<IoWarning />}
-          title="Attention"
-          variant="warning"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum." 
-        />
-        <Banner 
-          icon={<IoWarning />}
-          title="Attention"
-          variant="warning" 
-        />
-      </div>
-      <div>
-        <Banner 
-          icon={<FaTimesCircle />}
-          title="There is a problem with your application"
-          variant="error"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum." 
-        />
-        <Banner 
-          icon={<FaTimesCircle />}
-          title="There is a problem with your application"
-          variant="error" 
-        />
-      </div>
+      
     </div>
      
   )
