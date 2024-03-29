@@ -1,0 +1,89 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+}
+.flex {
+    display: flex;
+    gap: 10px;
+    margin: 20px 10px;
+}
+.badge {
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 10px;
+    width: 70px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1F2937;
+    background-color: #F3F4F6;
+}
+.red {
+    color: #991B1B;
+    background-color: #FEE2E2;
+}
+.yellow {
+    color: #92400E;
+    background-color: #FEF3C7;
+}
+.green {
+    color: #065F46;
+    background-color: #D1FAE5;
+}
+.blue {
+    color: #1E40AF;
+    background-color: #DBEAFE;
+}
+.purple {
+    color: #5B21B6;
+    background-color: #EDE9FE;
+}
+.indigo {
+    color: #3730A3;
+    background-color: #E0E7FF;
+}
+.pink {
+    color: #9D174D;
+    background-color: #FCE7F3;
+}
+.pill {
+    border-radius: 15px;
+}
+.square {
+    border-radius: 0;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    width: 900px;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 30px;
+}
+.banner h4 {
+    margin: 0;
+}
+.banner p {
+    margin-bottom: 0;
+}
+.success {
+    color: #065F46;
+    background-color: #ECFDF5;
+}
+.warning {
+    color: #B45309;
+    background-color: #FFFBEB;
+}
+.error {
+    color: #92400E;
+    background-color: #FEF2F2;
+}
+.neutral {
+    color: #1E40AF;
+    background-color: #EFF6FF;
+}
